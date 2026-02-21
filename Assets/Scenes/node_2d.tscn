@@ -1,0 +1,49 @@
+[gd_scene format=4 uid="uid://dbhtfutr1k5ai"]
+
+[ext_resource type="Texture2D" uid="uid://q5ijcned80dp" path="res://Assets/Sprites/tileset-grasslands.png" id="1_ja728"]
+[ext_resource type="PackedScene" uid="uid://nu33wc5rm376" path="res://Assets/Scenes/character_body_2d.tscn" id="2_8t2v2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vohp4"]
+texture = ExtResource("1_ja728")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_mqbpb"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_vohp4")
+
+[node name="Node2D" type="Node2D" unique_id=1803318128]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1492563037]
+tile_map_data = PackedByteArray("AAD//wAAAAAAAAAAAAAAAAAAAAACAAAAAAABAAAAAAADAAAAAAACAAAAAAADAAAAAAADAAAAAAAAAAEAAAAEAAAAAAACAAEAAAAFAAAAAAACAAAAAAAGAAAAAAAEAAAAAAADAP//AAAAAAAAAAAEAP//AAAEAAAAAAA=")
+tile_set = SubResource("TileSet_mqbpb")
+
+[node name="CharacterBody2D" parent="." unique_id=1903985831 instance=ExtResource("2_8t2v2")]
