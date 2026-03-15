@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://dbhtfutr1k5ai"]
 
-[ext_resource type="Texture2D" uid="uid://q5ijcned80dp" path="res://Assets/Sprites/tileset-grasslands.png" id="1_ja728"]
-[ext_resource type="PackedScene" uid="uid://nu33wc5rm376" path="res://Assets/Scenes/character_body_2d.tscn" id="2_8t2v2"]
+[ext_resource type="Texture2D" uid="uid://q5ijcned80dp" path="res://Assets/Sprites/tileset-grasslands.png" id="1_sycrl"]
+[ext_resource type="PackedScene" uid="uid://nu33wc5rm376" path="res://Assets/Scenes/player.tscn" id="2_o4qii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vohp4"]
-texture = ExtResource("1_ja728")
+texture = ExtResource("1_sycrl")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -43,7 +43,7 @@ sources/0 = SubResource("TileSetAtlasSource_vohp4")
 [node name="Node2D" type="Node2D" unique_id=1803318128]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1492563037]
-tile_map_data = PackedByteArray("AAD//wAAAAAAAAAAAAAAAAAAAAACAAAAAAABAAAAAAADAAAAAAACAAAAAAADAAAAAAADAAAAAAAAAAEAAAAEAAAAAAACAAEAAAAFAAAAAAACAAAAAAAGAAAAAAAEAAAAAAADAP//AAAAAAAAAAAEAP//AAAEAAAAAAA=")
+tile_map_data = PackedByteArray("AAD//wAAAAAAAAAAAAAAAAAAAAACAAAAAAABAAAAAAADAAAAAAACAAAAAAADAAAAAAADAAAAAAAAAAEAAAAEAAAAAAACAAEAAAAFAAAAAAACAAAAAAAGAAAAAAAEAAAAAAADAP//AAAAAAAAAAAEAP//AAAEAAAAAAD//wEAAAACAAIAAAAAAAEAAAADAAIAAAABAAEAAAACAAIAAAACAAEAAAADAAIAAAADAAEAAAAEAAIAAAAEAAEAAAAEAAIAAAAFAAEAAAADAAIAAAAGAAEAAAABAAIAAAA=")
 tile_set = SubResource("TileSet_mqbpb")
 
-[node name="CharacterBody2D" parent="." unique_id=1903985831 instance=ExtResource("2_8t2v2")]
+[node name="CharacterBody2D" parent="." unique_id=1903985831 instance=ExtResource("2_o4qii")]
