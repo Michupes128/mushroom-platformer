@@ -1,10 +1,12 @@
 extends CharacterBody2D
-class_name player_controller
+class_name playerController
+
 @export var speed = 10
 @export var jump = 10
 
 var speedMultiplier = 10.0
 var jumpMultiplier = -20.0
+var direction = 1
 
 
 func _physics_process(delta: float) -> void:
@@ -18,7 +20,7 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("left", "right")
+	direction = Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * speed * speedMultiplier
 	else:
