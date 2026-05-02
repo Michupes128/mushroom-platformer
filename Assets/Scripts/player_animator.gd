@@ -12,10 +12,9 @@ func _process(delta):
 
 	if abs(player_controller.velocity.x) > 0.0:
 		animation_player.play("walk")
-	else:
-		animation_player.play("idle")
-	
-	if player_controller.velocity.y < 0.0:
+	elif player_controller.velocity.y < 0.0:
 		animation_player.play("jump")
 	elif player_controller.velocity.y > 0.0:
 		animation_player.play("fall")
+	else:
+		animation_player.play("idle")
