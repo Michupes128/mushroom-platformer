@@ -1,5 +1,33 @@
 [gd_scene format=3 uid="uid://b4viy5ahtyawr"]
 
+[ext_resource type="Script" uid="uid://d0274avmtg8fr" path="res://Assets/Scenes/main_menu.gd" id="1_3ea4v"]
+[ext_resource type="Texture2D" uid="uid://c6fjql02g41n6" path="res://Assets/extras/mainmenu-background.png" id="1_yhxh7"]
+[ext_resource type="FontFile" uid="uid://dxg0vtteee8h2" path="res://Assets/extras/typefaces/GrapeSoda.ttf" id="2_3ea4v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhxh7"]
+bg_color = Color(0.74138474, 0.7413847, 0.74138457, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ea4v"]
+bg_color = Color(0.2665765, 0.26657474, 0.2665751, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mue0m"]
+bg_color = Color(0.4661808, 0.46618086, 0.46618068, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 8
+
 [node name="MainMenu" type="Control" unique_id=1344531963]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +35,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3ea4v")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1970626983]
 layout_mode = 1
@@ -15,3 +44,79 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("1_yhxh7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2033412101]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = -90.0
+offset_right = 168.0
+offset_bottom = 178.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="start" type="Button" parent="VBoxContainer" unique_id=1521724462]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_yhxh7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3ea4v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mue0m")
+text = "Start Game"
+
+[node name="option" type="Button" parent="VBoxContainer" unique_id=2110596511]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_yhxh7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3ea4v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mue0m")
+text = "Options"
+
+[node name="exit" type="Button" parent="VBoxContainer" unique_id=758946158]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_yhxh7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3ea4v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mue0m")
+text = "Exit"
+
+[node name="Label" type="Label" parent="." unique_id=348999843]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.5
+offset_top = -225.0
+offset_right = 50.5
+offset_bottom = -202.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.76862746)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = ExtResource("2_3ea4v")
+theme_override_font_sizes/font_size = 96
+text = "Mushroomer"
+
+[connection signal="pressed" from="VBoxContainer/start" to="." method="start_pressed"]
+[connection signal="pressed" from="VBoxContainer/option" to="." method="option_pressed"]
+[connection signal="pressed" from="VBoxContainer/exit" to="." method="exit_pressed"]
